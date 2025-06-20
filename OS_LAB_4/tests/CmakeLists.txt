@@ -1,0 +1,14 @@
+
+add_executable(Tests
+    tests.cpp
+    ${PROJECT_SOURCE_DIR}/Include/catch_amalgamated.cpp
+)
+
+target_include_directories(Tests PRIVATE
+    ${PROJECT_SOURCE_DIR}/Include
+    ${PROJECT_SOURCE_DIR}/Message
+    ${PROJECT_SOURCE_DIR}/Sender
+    ${PROJECT_SOURCE_DIR}/Receiver
+)
+
+target_compile_definitions(Tests PRIVATE CATCH_CONFIG_MAIN)
